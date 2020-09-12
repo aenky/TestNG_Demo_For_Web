@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel test suite" parallel="methods" thread-count="2">
+    <test name="Regression 1">
+        <classes>
+            <class name="Tests.Test">
+            <methods>
+
+
+                <include name="loginwithIdPassword"/>
+
+            </methods>
+            </class>
+
+        </classes>
+
+    </test>
+    <test name="groum">
+        <groups>
+            <run>
+                <include name = "functest" />
+            </run>
+        </groups>
+    </test>
+</suite>
